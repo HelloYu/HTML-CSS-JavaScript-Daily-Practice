@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #e0e3e4;
+}
+
+.search-box {
+	position: relative;
+	width: 70px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+}
+.search-box:hover {
+	width: 400px;
+}
+/* 键盘按键前的高光 */
+.search-box::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 12px;
+	height: 100%;
+	background: linear-gradient(#fff, #fff, #e3e3e3);
+	z-index: 10;
+	filter: blur(1px);
+}
+
+.search-box::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -1px;
+	width: 12px;
+	height: 100%;
+	background: #a5a3a3;
+	z-index: 10;
+	filter: blur(1px);
+}
+.search-box input {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0 20px;
+
+	border: none;
+	font-size: 1.2rem;
+	background: linear-gradient(#eff0f1, #b3aeae);
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 15px 15px 15px rgba(0, 0, 0, 0.1),
+		20px 20px 15px rgba(0, 0, 0, 0.1), 30px 30px 15px rgba(0, 0, 0, 0.1),
+		inset 1px 1px 2px #fff;
+}
+.search-box input::placeholder,
+.search-box input {
+	color: transparent;
+}
+
+.search-box:hover input::placeholder,
+.search-box:hover input {
+	color: #6b6b6b;
+}
+/* 移除Input框选中边框 outline vs border */
+.search-box input:focus {
+	outline: none;
+}
+.shadow {
+	position: absolute;
+	top: 0;
+	left: -60px;
+	width: calc(100% + 60px);
+	height: 300px;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.1),
+		transparent,
+		transparent
+	);
+	transform-origin: top;
+	transform: skew(45deg);
+	pointer-events: none;
+}
+.shadow::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -1px;
+	width: 61px;
+	height: 60px;
+	background-color: #e0e3e4;
+	z-index: 10;
+}
+
+.icon-search {
+	position: absolute;
+	right: 25px;
+	color: #6b6b6b;
+	cursor: pointer;
+}
