@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>2022-01-20时钟</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section>
+			<div class="clock">
+				<div class="hour">
+					<div class="hr" id="hr"></div>
+				</div>
+				<div class="min">
+					<div class="mi" id="mi"></div>
+				</div>
+				<div class="sec">
+					<div class="se" id="se"></div>
+				</div>
+			</div>
+		</section>
+		<script>
+			const deg = 6
+			const hr = document.getElementById('hr')
+			const mi = document.getElementById('mi')
+			const se = document.getElementById('se')
+
+			setInterval(() => {
+				let day = new Date()
+				let hh = day.getHours() * 30
+				let mm = day.getMinutes() * deg
+				let ss = day.getSeconds() * deg
+
+				hr.style.transform = `rotateZ(${hh + mm / 12}deg)`
+				mi.style.transform = `rotateZ(${mm}deg)`
+				se.style.transform = `rotateZ(${ss}deg)`
+			})
+		</script>
+	</body>
+</html>
