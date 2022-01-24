@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>D10: flex常用布局练习</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section class="two-rows">
+			<h2>两行布局，头部固定，下部自适应</h2>
+			<div>
+				<header>header</header>
+				<div>content</div>
+			</div>
+		</section>
+
+		<section class="three-rows-main-flex">
+			<h2>头部固定，中部自适应，底部固定</h2>
+			<div>
+				<header>header</header>
+				<main>content</main>
+				<footer>footer</footer>
+			</div>
+		</section>
+
+		<section class="three-rows-aside-fixed">
+			<h2>头部固定，中部左固定，右部自适应</h2>
+			<div>
+				<header>header</header>
+				<div>
+					<aside>aside</aside>
+					<main>content</main>
+				</div>
+			</div>
+		</section>
+
+		<section class="one-rows-aside-fixed">
+			<h2>左导航固定，右部自适应</h2>
+			<div>
+				<aside>aside</aside>
+				<main>content</main>
+			</div>
+		</section>
+	</body>
+</html>

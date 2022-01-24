@@ -1,0 +1,104 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #c7c7c7;
+	display: flex;
+	flex-flow: wrap;
+	padding: 20px;
+	gap: 20px;
+}
+
+h2 {
+	font-size: 1rem;
+	text-align: center;
+}
+section {
+	display: flex;
+	flex-direction: column;
+	width: 20vw;
+	height: 200px;
+	border: 1px solid #1c1c1d;
+}
+
+section > div {
+	border-top: 1px solid #1c1c1d;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+/* 两行布局，头部固定，下部自适应 */
+
+.two-rows > div > header {
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border-bottom: 1px solid #1c1c1d;
+}
+.two-rows > div > div:nth-child(2) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+/* 三行布局，头部固定，中部自适应，底部固定 */
+.three-rows-main-flex > div > header {
+	border-bottom: 1px solid #1c1c1d;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.three-rows-main-flex > div > main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #1c1c1d;
+	flex: 1;
+}
+.three-rows-main-flex > div > footer {
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+/* 头部固定，中部左固定，右部自适应 */
+.three-rows-aside-fixed > div > header {
+	border-bottom: 1px solid #1c1c1d;
+	flex: 0 0 20%;
+	text-align: center;
+}
+
+.three-rows-aside-fixed > div > div {
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+.three-rows-aside-fixed > div > div > aside {
+	width: 50px;
+	height: 100%;
+	border-right: 1px solid #1c1c1d;
+}
+.three-rows-aside-fixed > div > div > main {
+	flex: 1;
+	height: 100%;
+}
+
+/* 左导航固定，右部自适应*/
+
+.one-rows-aside-fixed > div {
+	display: flex;
+	flex-direction: row;
+}
+.one-rows-aside-fixed > div > aside {
+	border-right: 1px solid #1c1c1d;
+	width: 80px;
+	text-align: center;
+}
+
+.one-rows-aside-fixed > div > main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
