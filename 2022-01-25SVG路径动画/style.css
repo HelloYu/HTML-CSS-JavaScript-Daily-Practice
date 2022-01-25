@@ -1,0 +1,90 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: #081d1a;
+}
+
+path {
+	stroke-width: 20px;
+	fill: transparent;
+	stroke: #0dd4db;
+}
+
+.qq path {
+	stroke-dasharray: 2950;
+	stroke-dashoffset: 0;
+}
+.qq:hover path {
+	animation: animate-qq 2s linear forwards;
+}
+
+@keyframes animate-qq {
+	0% {
+		stroke-dashoffset: 0;
+	}
+	40% {
+		stroke-dashoffset: 2950;
+	}
+	80% {
+		stroke-dashoffset: 5900;
+		fill: transparent;
+	}
+	100% {
+		stroke-dashoffset: 5900;
+		fill: #05b64f;
+	}
+}
+
+.moon path {
+	stroke-dasharray: 3450;
+	stroke-dashoffset: 0;
+}
+.moon:hover path {
+	animation: animate-moon 2s linear forwards;
+}
+
+@keyframes animate-moon {
+	0% {
+		stroke-dashoffset: 0;
+	}
+	40% {
+		stroke-dashoffset: 3450;
+	}
+	80% {
+		stroke-dashoffset: 6900;
+		fill: transparent;
+	}
+	100% {
+		stroke-dashoffset: 6900;
+		fill: #f04c00;
+	}
+}
+
+.apple path {
+	stroke-dasharray: 3450;
+	stroke-dashoffset: 0;
+}
+.apple:hover path {
+	animation: animate-apple 2s linear forwards;
+}
+
+@keyframes animate-apple {
+	0% {
+		stroke-dashoffset: 0;
+	}
+	40% {
+		stroke-dashoffset: 3450;
+	}
+	80% {
+		stroke-dashoffset: 6900;
+		fill: transparent;
+	}
+	100% {
+		stroke-dashoffset: 6900;
+		fill: #ddf6fd;
+	}
+}
