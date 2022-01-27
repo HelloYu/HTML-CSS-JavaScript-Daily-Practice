@@ -1,0 +1,91 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background: #333;
+	gap: 50px;
+}
+
+.loader {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	background: #333;
+	border-radius: 50%;
+	box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+		10px 10px 70px rgba(0, 0, 0, 0.25);
+	border: 2px solid #222;
+}
+
+.loader::before {
+	content: '';
+	position: absolute;
+	inset: 40px;
+	border-radius: 50%;
+	border: 3px dashed #666;
+	box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.25),
+		inset 5px 5px 35px rgba(0, 0, 0, 0.25);
+
+	animation: scan 15s linear infinite;
+	z-index: 10;
+}
+.loader::after {
+	content: '';
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	border: 3px dashed #666;
+	box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.25),
+		inset 5px 5px 35px rgba(0, 0, 0, 0.25);
+	background: rgba(0, 0, 0, 0.25);
+	animation: scan 10s linear infinite;
+	z-index: 11;
+}
+
+.loader span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	background: transparent;
+	transform-origin: top left;
+	animation: scan 2s linear infinite;
+}
+
+.loader:nth-child(2) span {
+	animation-delay: -1s;
+	filter: hue-rotate(220deg);
+}
+@keyframes scan {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader span::before {
+	content: '';
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #170b85;
+	transform: rotate(35deg);
+	transform-origin: top left;
+	filter: blur(30px) drop-shadow(50px 50px 50px rgb(5, 114, 69));
+	opacity: 0.75;
+}
