@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.wrapper {
+	width: 100%;
+	height: 120vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	perspective: 20px;
+	background: #1f2020;
+}
+.header {
+	position: relative;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+}
+
+.mountain {
+	position: absolute;
+	width: 100%;
+	height: 120vh;
+	object-fit: cover;
+	transform: translateZ(-20px) scale(2);
+}
+.man-rock {
+	position: absolute;
+	bottom: 0;
+	z-index: 10;
+	width: 50%;
+	object-fit: contain;
+	transform: translateZ(-5px) scale(1.5) translateY(50%);
+}
+
+.main {
+	z-index: 15;
+	font-size: 6rem;
+	color: transparent;
+	-webkit-text-stroke: 2px #180101;
+}
+
+section {
+	height: 100%;
+	background: #234234;
+}
