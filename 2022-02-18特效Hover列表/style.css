@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #f1eeee;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.box {
+	position: relative;
+	width: 400px;
+	height: 100px;
+	background: #fff;
+	cursor: pointer;
+	transition: 0.5s;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.02);
+}
+
+.box:nth-child(1) {
+	transform: translateX(-70px);
+}
+
+.box:nth-child(3) {
+	transform: translateX(70px);
+}
+
+.container:hover .box:nth-child(1) {
+	transform: translateX(0px);
+}
+
+.container:hover .box:nth-child(3) {
+	transform: translateX(0px);
+}
+
+.box::before {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background: var(--clr);
+	transition: 0.5s ease-in-out;
+}
+
+.box:hover::before {
+	width: 100%;
+}
+
+.content {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.icon {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100px;
+}
+.icon ion-icon {
+	font-size: 2rem;
+	color: var(--clr);
+	transition: 0.5s ease-in-out;
+}
+.box:hover .icon ion-icon {
+	transition: 0.5s ease-in-out;
+	color: #fff;
+}
+
+.box:hover .content h3,
+.box:hover .content p {
+	transition: 0.5s ease-in-out;
+	color: #fff;
+}
